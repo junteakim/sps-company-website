@@ -86,11 +86,38 @@
           <a class="button button-lime" href="#product">See the quotation agent <span aria-hidden="true">↗</span></a>
           <a class="hero-contact" href="#services">Explore plant services <span aria-hidden="true">→</span></a>
         </div>
-        <figure class="hero-art">
-          <div class="art-topline"><span>THE DETAILS KEEP IT RUNNING.</span><span aria-hidden="true">[ SPS / 01 ]</span></div>
-          <img src="assets/plant-assembly.svg" width="900" height="720" alt="Illustrative exploded industrial assembly showing a cylindrical shell, tube bundle and flange." fetchpriority="high">
-          <figcaption><span class="caption-cross" aria-hidden="true">+</span> Plant systems, considered part by part.<span class="illustration-note">Concept illustration</span></figcaption>
-        </figure>
+        <div class="hero-art product-shot" role="img" aria-label="Example output of the quotation agent: RFQ clauses, extracted requirements and a quotation workbook with source references">
+          <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="shot-title">Quotation agent · RFQ 26-0415 · Vertical separator</span><span class="shot-state">In review</span></div>
+          <div class="shot-body">
+            <div class="shot-col">
+              <p class="shot-h">RFQ clauses</p>
+              <p class="clause"><span class="ref">§4.2.3</span> Design pressure <mark>15.5 barg</mark> at <mark>120 °C</mark>. Corrosion allowance <mark>3 mm</mark>. Impact testing per <mark>UCS-66</mark>, MDMT <mark>-29 °C</mark>.</p>
+              <p class="clause"><span class="ref">§6.1</span> Shell and heads in <mark>SA-516 Gr.70N</mark>. <mark>100% RT</mark> on Category A and B joints.</p>
+            </div>
+            <div class="shot-col">
+              <p class="shot-h">Extracted requirements</p>
+              <ul class="req">
+                <li><span class="ok">OK</span> Design pressure 15.5 barg at 120 °C <i>§4.2.3</i></li>
+                <li><span class="ok">OK</span> CA 3 mm, SA-516 Gr.70N <i>§4.2.3, §6.1</i></li>
+                <li><span class="gap">GAP</span> Nozzle schedule not in package <i>no source</i></li>
+                <li><span class="chk">CHECK</span> MDMT -29 °C against UCS-66 curve <i>§4.2.3</i></li>
+                <li><span class="ok">OK</span> RT 100% on Cat. A and B <i>§6.1</i></li>
+              </ul>
+            </div>
+            <div class="shot-col shot-wide">
+              <p class="shot-h">Quotation workbook, draft</p>
+              <table class="wb">
+                <tr><th>Line</th><th>Qty</th><th>Source</th></tr>
+                <tr><td>Shell plate SA-516 Gr.70N, 16 mm</td><td>2.1 t</td><td>§6.1 · UG-27</td></tr>
+                <tr><td>2:1 ellipsoidal heads</td><td>2 ea</td><td>DWG-01 · UG-32</td></tr>
+                <tr><td>RT 100%, Cat. A and B seams</td><td>18.4 m</td><td>§6.1</td></tr>
+                <tr><td>Impact test coupons</td><td><span class="hold">HOLD</span></td><td>§4.2.3 · CHECK</td></tr>
+              </table>
+              <p class="sign">Reviewer sign off required before any price is issued.</p>
+            </div>
+          </div>
+          <p class="shot-caption"><span class="caption-cross" aria-hidden="true">+</span> Example output. Every line links back to the clause or drawing it came from.<span class="illustration-note">Product view</span></p>
+        </div>
       </div>
       <div class="hero-bottom container">
         <p>BASED IN KOREA. FOCUSED ON YOUR REQUIREMENTS.</p>
