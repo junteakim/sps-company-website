@@ -34,6 +34,20 @@
       "knowsAbout": ["Claude API", "Claude Code", "Agent SDK", "Model Context Protocol", "ASME pressure vessels", "Quotation automation", "Neo4j knowledge graphs"]
     }
   </script>
+  <script id="sps-product-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SPS quotation and engineering agent",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud",
+      "url": "https://smc12puls.com/#product",
+      "description": "Claude powered quotation and engineering agent for ASME pressure vessel fabricators. Reads RFQ packages, extracts requirements line by line, flags gaps, drafts a reviewable quotation workbook, traces every number through a Neo4j ontology and checks designs with a deterministic ASME engine. In daily use on live bids since early 2026.",
+      "creator": { "@type": "Organization", "name": "Seoul Plant Service", "url": "https://smc12puls.com/" },
+      "datePublished": "2026-01",
+      "offers": { "@type": "Offer", "availability": "https://schema.org/LimitedAvailability", "description": "Pilot deployments for fabricators and plant suppliers" }
+    }
+  </script>
   <title>Seoul Plant Service | Claude Agents for Plant Suppliers</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -257,7 +271,13 @@
         <div class="about-copy">
           <h2 id="about-title">A practical partner<br>for the work ahead.</h2>
           <p class="about-lead">Seoul Plant Service builds Claude agents for plant suppliers and provides practical plant support.</p>
-          <p>Based in Dangjin, Republic of Korea, SPS was founded in April 2025 to build AI products for the industrial plant supply chain. Our first product, a quotation and engineering agent for pressure vessel fabricators, has been in daily use on live bids since early 2026. Alongside it, SPS provides Claude development and consulting, replacement components, engineering support and global supply.</p>
+          <p>Based in Dangjin, Republic of Korea, SPS was founded in April 2025 by Jun Tea Kim, a quotation engineer who has priced ASME pressure vessels at a U stamp fabricator in Korea. The company builds AI products for the industrial plant supply chain. Its first product, a quotation and engineering agent for pressure vessel fabricators, has been in daily use on live bids since early 2026. Alongside it, SPS provides Claude development and consulting, replacement components, engineering support and global supply.</p>
+          <dl class="company-facts" aria-label="Milestones">
+            <div><dt>April 2025</dt><dd>Seoul Plant Service established in Dangjin as a sole proprietorship.</dd></div>
+            <div><dt>2025</dt><dd>First Claude based quotation pipeline built with Claude Code: RFQ extraction, workbook drafting and pricing gates.</dd></div>
+            <div><dt>Early 2026</dt><dd>Quotation agent in daily use on live bids at a U stamp pressure vessel fabricator.</dd></div>
+            <div><dt>October 2026</dt><dd>Product opened for pilot deployments with other fabricators and plant suppliers.</dd></div>
+          </dl>
           <dl class="company-facts">
             <div><dt>Established</dt><dd><time datetime="2025-04-22">22 April 2025</time></dd></div>
             <div><dt>Business form</dt><dd>Sole proprietorship</dd></div>
@@ -287,6 +307,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top" aria-label="Seoul Plant Service, back to top"><span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span><span class="brand-name">Seoul Plant<br>Service</span></a><p id="company-information">© <span id="year">2026</span> Seoul Plant Service.</p><a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top" aria-label="Seoul Plant Service, back to top"><span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span><span class="brand-name">Seoul Plant<br>Service</span></a><p id="company-information">© <span id="year">2026</span> Seoul Plant Service. Established April 2025, Dangjin, Republic of Korea.</p><a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
 </body>
 </html>
