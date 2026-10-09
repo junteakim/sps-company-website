@@ -54,3 +54,28 @@
     })();
   });
 })();
+
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".fchip"));
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      var f = c.getAttribute("data-filter");
+      chips.forEach(function (x) { x.classList.toggle("is-on", x === c); });
+      Array.prototype.forEach.call(document.querySelectorAll(".req-list li"), function (li) {
+        li.hidden = !(f === "all" || li.getAttribute("data-status") === f);
+      });
+    });
+  });
+  var steps = Array.prototype.slice.call(document.querySelectorAll(".run-steps li"));
+  var prog = document.querySelector(".demo-progress");
+  if (!steps.length || !prog || !window.MutationObserver) return;
+  var map = ["Reading", "Extracting", "Checking", "Drafting", "Running"];
+  new MutationObserver(function () {
+    var t = prog.textContent || "";
+    if (t.indexOf("Done") === 0) { steps.forEach(function (s) { s.classList.remove("is-active"); s.classList.add("is-done"); }); document.querySelector(".run-steps").classList.add("is-complete"); return; }
+    var k = -1; map.forEach(function (m, i) { if (t.indexOf(m) === 0) k = i; });
+    if (k < 0) return;
+    document.querySelector(".run-steps").classList.remove("is-complete");
+    steps.forEach(function (s, i) { s.classList.toggle("is-done", i < k); s.classList.toggle("is-active", i === k); });
+  }).observe(prog, { childList: true, characterData: true, subtree: true });
+})();
