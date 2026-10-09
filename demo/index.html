@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Stampwise demo on a fictional pressure vessel RFQ: requirements with sources, gap questions, a quotation workbook draft and ASME checks.">
+  <link rel="canonical" href="https://smc12puls.com/demo/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smc12puls.com/demo/">
+  <meta property="og:title" content="Stampwise demo | Seoul Plant Service">
+  <meta property="og:description" content="Interactive Stampwise demo on a fictional pressure vessel RFQ: requirements with sources, gap questions, a quotation workbook draft and ASME checks.">
+  <title>Stampwise demo | Seoul Plant Service</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+  <script src="/demo/demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Seoul Plant Service home">
+        <span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span>
+        <span class="brand-name">Seoul Plant<br>Service</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+        <a href="/#product">Product</a>
+        <a href="/#how">How it works</a>
+        <a href="/demo/">Demo</a>
+        <a href="/docs/">Docs</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/changelog/">Changelog</a>
+        <a href="/#about">About</a>
+        <a class="nav-contact" href="/#contact">Contact SPS <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow light"><span class="status-dot" aria-hidden="true"></span> Interactive demo</p>
+        <h1 id="page-title" class="page-title">See Stampwise work<br>on a sample RFQ.</h1>
+      </div>
+    </section>
+    <section class="section page-body">
+      <div class="container">
+        <div class="demo-banner">
+          <p><strong>Fictional RFQ.</strong> This demo uses a made up package for a vertical separator, V-101. Outputs show the format Stampwise produces. ASME values were computed by the Stampwise engine for this vessel. Prices are hidden.</p>
+          <button type="button" class="button button-lime demo-run" data-run>Run Stampwise on this package <span aria-hidden="true">↗</span></button>
+          <p class="demo-progress" aria-live="polite" hidden></p>
+        </div>
+        <div class="demo-layout">
+          <aside class="demo-doc" aria-label="RFQ package">
+            <p class="pane-h">RFQ package · 2 documents</p>
+            <div class="doc-block"><p class="doc-title">DEMO-SPEC-001 Rev.0 · Vessel specification (excerpt)</p><p class="clause" id="c31"><span class="ref">SPEC §3.1</span> Design code: ASME Section VIII Division 1, latest edition. Vessel to be U stamped and registered with the National Board.</p><p class="clause" id="c421"><span class="ref">SPEC §4.2.1</span> Design pressure 15.5 barg. Design temperature 120 °C.</p><p class="clause" id="c422"><span class="ref">SPEC §4.2.2</span> Minimum design metal temperature (MDMT) -29 °C.</p><p class="clause" id="c423"><span class="ref">SPEC §4.2.3</span> Corrosion allowance 3 mm on all pressure parts.</p><p class="clause" id="c51"><span class="ref">SPEC §5.1</span> Shell and heads SA-516 Gr.70N. Nozzle necks SA-106 Gr.B. Flanges SA-105N.</p><p class="clause" id="c61"><span class="ref">SPEC §6.1</span> 100% radiography on Category A and B joints.</p><p class="clause" id="c64"><span class="ref">SPEC §6.4</span> Hydrostatic test per UG-99.</p><p class="clause" id="c72"><span class="ref">SPEC §7.2</span> Painting per DEMO-PAINT-002.</p></div><div class="doc-block"><p class="doc-title">DEMO-DS-V101 · Data sheet</p><table class="ds"><tr id="d1"><th>Tag / service</th><td>V-101 Inlet Separator, vertical</td></tr><tr id="d2"><th>Inside diameter × T/T</th><td>1,600 mm × 4,800 mm</td></tr><tr id="d3"><th>Heads</th><td>2:1 semi-ellipsoidal</td></tr><tr id="d4"><th>Design P / T</th><td>15.5 barg / 120 °C</td></tr><tr id="d5"><th>Corrosion allowance</th><td>1.5 mm</td></tr><tr id="d6"><th>NLL / HLL</th><td>Later</td></tr><tr id="d7"><th>Support</th><td>Skirt, height by vendor</td></tr><tr id="d8"><th>Nozzles</th><td>N1 8", N2 6", N3 3", N4 2", M1 24", all Class 300 RF</td></tr></table></div>
+          </aside>
+          <div class="demo-out">
+            <div class="demo-tabs" role="tablist" aria-label="Stampwise output"><button type="button" class="demo-tab is-active" data-step="requirements" role="tab" aria-selected="true"><span>1</span> Requirements</button><button type="button" class="demo-tab" data-step="gaps" role="tab" aria-selected="false"><span>2</span> Questions</button><button type="button" class="demo-tab" data-step="workbook" role="tab" aria-selected="false"><span>3</span> Workbook</button><button type="button" class="demo-tab" data-step="asme" role="tab" aria-selected="false"><span>4</span> ASME</button></div>
+            <section class="demo-panel is-active" id="step-requirements" data-step="requirements" aria-labelledby="h-requirements"><h2 id="h-requirements"><span class="num">1</span> Requirements</h2><p class="panel-intro">Every requirement with the clause it came from. Click a line to see its source.</p><ul class="req-list"><li><button type="button" class="req-item" data-src="c31"><span class="st ok">OK</span><span class="req-text">ASME VIII Div. 1, U stamp, National Board registration</span><span class="req-src">§3.1</span></button></li><li><button type="button" class="req-item" data-src="c421 d4"><span class="st ok">OK</span><span class="req-text">Design 15.5 barg at 120 °C</span><span class="req-src">§4.2.1, DS</span></button></li><li><button type="button" class="req-item" data-src="c422"><span class="st ok">OK</span><span class="req-text">MDMT -29 °C</span><span class="req-src">§4.2.2</span></button></li><li><button type="button" class="req-item" data-src="c423 d5"><span class="st chk">CHECK</span><span class="req-text">Corrosion allowance conflict: SPEC 3 mm vs data sheet 1.5 mm</span><span class="req-src">§4.2.3, DS</span></button></li><li><button type="button" class="req-item" data-src="c51"><span class="st ok">OK</span><span class="req-text">SA-516 Gr.70N shell and heads; SA-106 Gr.B necks; SA-105N flanges</span><span class="req-src">§5.1</span></button></li><li><button type="button" class="req-item" data-src="c61"><span class="st ok">OK</span><span class="req-text">RT 100% on Category A and B joints</span><span class="req-src">§6.1</span></button></li><li><button type="button" class="req-item" data-src="c64"><span class="st ok">OK</span><span class="req-text">Hydrostatic test per UG-99</span><span class="req-src">§6.4</span></button></li><li><button type="button" class="req-item" data-src="c72"><span class="st gap">GAP</span><span class="req-text">Painting spec DEMO-PAINT-002 referenced but not in package</span><span class="req-src">§7.2</span></button></li><li><button type="button" class="req-item" data-src="d6"><span class="st gap">GAP</span><span class="req-text">Liquid levels not given (static head at bottom head)</span><span class="req-src">DS</span></button></li><li><button type="button" class="req-item" data-src="d7"><span class="st gap">GAP</span><span class="req-text">Skirt height not given</span><span class="req-src">DS</span></button></li><li><button type="button" class="req-item" data-src="d8"><span class="st ok">OK</span><span class="req-text">Nozzles N1 to N4 and M1, Class 300 RF</span><span class="req-src">DS</span></button></li></ul></section><section class="demo-panel" id="step-gaps" data-step="gaps" aria-labelledby="h-gaps"><h2 id="h-gaps"><span class="num">2</span> Gaps and questions</h2><p class="panel-intro">Missing data and conflicts become a draft clarification list for the customer.</p><ol class="gap-list"><li><button type="button" class="req-item" data-src="c423 d5"><span class="q">Q1</span><span class="req-text">Please confirm the corrosion allowance. SPEC §4.2.3 states 3 mm, the data sheet states 1.5 mm. We check and price with 3 mm until confirmed.</span></button></li><li><button type="button" class="req-item" data-src="c72"><span class="q">Q2</span><span class="req-text">Please provide DEMO-PAINT-002, referenced in SPEC §7.2.</span></button></li><li><button type="button" class="req-item" data-src="d6"><span class="q">Q3</span><span class="req-text">Please provide normal and high liquid levels. Static head is added to the design pressure at the bottom head.</span></button></li><li><button type="button" class="req-item" data-src="d7"><span class="q">Q4</span><span class="req-text">Please confirm the skirt height or the bottom tangent line elevation.</span></button></li></ol></section><section class="demo-panel" id="step-workbook" data-step="workbook" aria-labelledby="h-workbook"><h2 id="h-workbook"><span class="num">3</span> Quotation workbook</h2><p class="panel-intro">Draft lines with quantities and sources. Lines that depend on open questions stay on hold.</p><table class="wb-table"><thead><tr><th>Line</th><th>Qty</th><th>Source</th><th>Price</th></tr></thead><tbody><tr data-src="c51 d2"><td>Shell plate SA-516 Gr.70N, 14 mm, two courses</td><td>2.6 t</td><td class="mono">§5.1 · DS · UG-27</td><td class="price-hidden">Hidden</td></tr><tr data-src="c51 d3"><td>2:1 semi-ellipsoidal heads, 14 mm min. after forming</td><td>2 ea</td><td class="mono">§5.1 · DS · UG-32</td><td class="price-hidden">Hidden</td></tr><tr data-src="d8"><td>Nozzles N1 to N4 and manway M1, Class 300 RF</td><td>5 ea</td><td class="mono">DS</td><td class="price-hidden">Hidden</td></tr><tr data-src="c61"><td>RT 100%, Category A and B seams</td><td>19.9 m</td><td class="mono">§6.1</td><td class="price-hidden">Hidden</td></tr><tr data-src="c64"><td>Hydrostatic test per UG-99</td><td>1 lot</td><td class="mono">§6.4</td><td class="price-hidden">Hidden</td></tr><tr class="hold" data-src="c72"><td>Painting</td><td><span class="st chk">HOLD</span></td><td class="mono">§7.2 · Q2</td><td class="price-hidden">Hidden</td></tr><tr class="hold" data-src="d7"><td>Skirt</td><td><span class="st chk">HOLD</span></td><td class="mono">DS · Q4</td><td class="price-hidden">Hidden</td></tr></tbody></table><p class="panel-note">Prices are hidden in this demo. In a pilot they come from your own price references and rates. Quantities use 3 mm corrosion allowance until Q1 is answered.</p></section><section class="demo-panel" id="step-asme" data-step="asme" aria-labelledby="h-asme"><h2 id="h-asme"><span class="num">4</span> ASME checks</h2><p class="panel-intro">Thickness checks run in deterministic code, not in the language model.</p><div class="asme-grid">
+  <div class="asme-card"><p class="asme-h">Shell · UG-27(c)(1)</p>
+    <dl><div><dt>Required thickness</dt><dd>12.08 mm <small>(9.08 pressure + 3.00 CA)</small></dd></div>
+    <div><dt>Selected</dt><dd>14 mm SA-516 Gr.70N</dd></div>
+    <div><dt>Allowable stress at 120 °C</dt><dd>138 MPa</dd></div>
+    <div><dt>MAWP, corroded</dt><dd>1.87 MPa vs 1.55 MPa design</dd></div></dl>
+    <p class="verdict pass">PASS</p></div>
+  <div class="asme-card"><p class="asme-h">2:1 heads · UG-32(c)(1)</p>
+    <dl><div><dt>Required thickness</dt><dd>12.01 mm <small>(incl. 3.00 CA)</small></dd></div>
+    <div><dt>Selected</dt><dd>14 mm min. after forming</dd></div>
+    <div><dt>Joint efficiency</dt><dd>1.0 (100% RT, §6.1)</dd></div>
+    <div><dt>MAWP, corroded</dt><dd>1.90 MPa vs 1.55 MPa design</dd></div></dl>
+    <p class="verdict pass">PASS</p></div>
+</div>
+<p class="panel-note">Computed by the Stampwise ASME engine (Section VIII Division 1, 2023 edition) for this fictional vessel, with allowable stress from the material database. Static head is not yet included: the bottom head is rechecked once Q3 gives the liquid levels. Pressure margins of 0.32 MPa (shell) and 0.35 MPa (heads) are reported to the estimator.</p></section>
+          </div>
+        </div>
+        <div class="demo-cta">
+          <p>Want to see this on one of your own RFQ packages?</p>
+          <a class="button button-ink" href="/pilot/">Request a pilot <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="/" aria-label="Seoul Plant Service home"><span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span><span class="brand-name">Seoul Plant<br>Service</span></a><nav class="footer-links" aria-label="Company"><a href="/docs/">Docs</a><a href="/pricing/">Pricing</a><a href="/changelog/">Changelog</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a></nav><p id="company-information">© <span id="year">2026</span> Seoul Plant Service. Established April 2025, Dangjin, Republic of Korea.</p></div></footer>
+</body>
+</html>
