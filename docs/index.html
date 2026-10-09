@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the SPS quotation agent reads RFQ packages, extracts requirements, drafts quotation workbooks and keeps ASME checks deterministic, with human sign off.">
+  <link rel="canonical" href="https://smc12puls.com/docs/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smc12puls.com/docs/">
+  <meta property="og:title" content="How the SPS quotation agent works | Seoul Plant Service">
+  <meta property="og:description" content="How the SPS quotation agent reads RFQ packages, extracts requirements, drafts quotation workbooks and keeps ASME checks deterministic, with human sign off.">
+  <title>How the SPS quotation agent works | Seoul Plant Service</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Seoul Plant Service home">
+        <span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span>
+        <span class="brand-name">Seoul Plant<br>Service</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+        <a href="/#product">Product</a>
+        <a href="/docs/">Docs</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#services">Plant services</a>
+        <a href="/#about">About SPS</a>
+        <a class="nav-contact" href="/#contact">Contact SPS <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow light"><span class="status-dot" aria-hidden="true"></span> Docs</p>
+        <h1 id="page-title" class="page-title">How the quotation<br>agent works.</h1>
+      </div>
+    </section>
+    <section class="section page-body">
+      <div class="container">
+        <div class="prose">
+          <p class="lead">The SPS quotation agent turns an incoming RFQ package for a pressure vessel into a reviewable quotation draft. This page explains what it reads, what it produces and where people stay in control.</p>
+
+          <h2>1. Inputs</h2>
+          <ul>
+            <li>RFQ packages: specifications, data sheets, material requisitions, drawings and vendor forms.</li>
+            <li>Formats: PDF, Word and Excel. Drawings are read from PDF.</li>
+            <li>Languages: English and Korean, including mixed packages.</li>
+            <li>Your references: material price lists, fabrication rates and past quotations you choose to share.</li>
+          </ul>
+
+          <h2>2. How a package is processed</h2>
+          <ol>
+            <li><strong>Intake.</strong> Claude reads the full package with long context and builds an index of documents, sections and clauses.</li>
+            <li><strong>Requirement extraction.</strong> Each technical and commercial requirement is listed line by line with the source document and clause it came from.</li>
+            <li><strong>Gap check.</strong> Missing data, conflicting revisions and unusual conditions are flagged, with a draft clarification list for the customer.</li>
+            <li><strong>Workbook draft.</strong> The agent drafts a quotation workbook: materials, fabrication, NDE, testing and quantities. Every line keeps a link to its source.</li>
+            <li><strong>Engineering checks.</strong> Thickness and allowable stress checks for ASME Section VIII Division 1 and 2 run in deterministic code with source approved tables. The language model prepares inputs and explains results; it does not compute code values.</li>
+            <li><strong>Review and sign off.</strong> A named estimator reviews the draft. Nothing is priced or sent without human approval.</li>
+          </ol>
+
+          <h2>3. Outputs</h2>
+          <ul>
+            <li>Requirement list with source references.</li>
+            <li>Clarification list for the customer.</li>
+            <li>Quotation workbook in Excel, with traceable lines and review status.</li>
+            <li>Engineering check summary for the estimator and design engineer.</li>
+          </ul>
+
+          <h2>4. Architecture</h2>
+          <ul>
+            <li><strong>Models:</strong> Claude through the Claude API. Development and operations use Claude Code.</li>
+            <li><strong>Orchestration:</strong> agents built with the Claude Agent SDK.</li>
+            <li><strong>Tools:</strong> Model Context Protocol (MCP) servers for pricing data, engineering tables and the calculation engine.</li>
+            <li><strong>Traceability:</strong> a Neo4j ontology that links requirements, components, calculations and prices to their sources.</li>
+            <li><strong>Gates:</strong> deterministic checks on quantities, totals and engineering values before any draft is marked ready for review.</li>
+          </ul>
+
+          <h2>5. Data handling</h2>
+          <ul>
+            <li>Customer documents are processed through the Claude API under Anthropic's commercial terms.</li>
+            <li>SPS does not use customer documents to train models.</li>
+            <li>Pilot documents are deleted within 30 days after the pilot ends unless you ask us to keep them.</li>
+            <li>See the <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a> for details.</li>
+          </ul>
+
+          <h2>6. Status</h2>
+          <p>The agent has been in daily use on live bids at an ASME U stamp pressure vessel fabricator in Korea since early 2026. Pilot deployments for other fabricators and plant suppliers opened in October 2026. See <a href="/pricing/">Pricing</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="/" aria-label="Seoul Plant Service home"><span class="wordmark" aria-hidden="true">SPS<span class="brand-square"></span></span><span class="brand-name">Seoul Plant<br>Service</span></a><nav class="footer-links" aria-label="Company"><a href="/docs/">Docs</a><a href="/pricing/">Pricing</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a></nav><p id="company-information">© <span id="year">2026</span> Seoul Plant Service. Established April 2025, Dangjin, Republic of Korea.</p></div></footer>
+</body>
+</html>
